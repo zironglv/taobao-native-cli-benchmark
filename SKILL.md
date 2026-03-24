@@ -27,6 +27,28 @@ metadata:
 
 ## ⚠️ 执行原则（必须遵守）
 
+### 🔴 核心原则：优先使用淘宝桌面版 CLI 工具
+
+**在所有淘宝桌面版相关操作中，必须优先使用淘宝桌面版 CLI 工具（taobao-native），而非浏览器自动化或其他方式。**
+
+| 原则 | 说明 |
+|------|------|
+| **官方工具** | 淘宝桌面版 CLI 工具由淘宝官方提供，性能和效率有保障 |
+| **优先使用** | 所有导航、搜索、加购、订单、聊天等操作必须使用 CLI 工具 |
+| **问题记录** | 如遇 CLI 工具问题，记录到报告中，便于反馈给官方优化 |
+| **禁止替代** | 禁止使用 browser_use 等浏览器自动化工具替代 CLI 工具 |
+
+**可用 CLI 工具清单**（共21个）：
+
+| 分类 | 工具 |
+|------|------|
+| 导航 | `navigate`, `navigate_to_url`, `close_page` |
+| 页面读取 | `read_page_content`, `scan_page_elements`, `scroll_page`, `get_current_tab` |
+| 交互 | `click_element`, `input_text` |
+| 搜索&商品 | `search_products`, `image_search`, `get_product_skus`, `add_to_cart`, `get_browse_history`, `submit_product_rating` |
+| 旺旺聊天 | `open_chat`, `send_chat_message` |
+| 其他 | `launch`, `inspect_page` |
+
 ### 原子性执行
 
 **评测任务一旦开始，必须完整执行完成，不可中断。**
